@@ -1,4 +1,5 @@
 # A very useful and detailed tutorial, please read it carefully first
 https://web.stanford.edu/class/archive/cs/cs107/cs107.1226/resources/gdb.html
+# You can also run 'man gdb' in terminal, which will give you the manual of gdb. If you already started gdb, you can also run 'help' inside.
 # print armadillo matrix (suppose you have a matrix named 'A') in gdb:
 p *A.mem@5@5          // this will print the submatrix from A[0,0] to A[4,4], a 5X5 submatrix
