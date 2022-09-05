@@ -1,3 +1,7 @@
+# Install gdb on Mac & Linux
+Check if already installed: gdb --version
+Mac: brew install gdb
+Linux: sudo apt-get install gdb
 # A very useful and detailed tutorial, please read it carefully first
 https://web.stanford.edu/class/archive/cs/cs107/cs107.1226/resources/gdb.html
 # You can also run 'man gdb' in terminal, which will give you the manual of gdb. If you already started gdb, you can also run 'help' inside.
