@@ -1,0 +1,9 @@
+# install emacs:
+Mac: brew install emacs
+Linux: sudo apt-get install emacs
+# Keys:
+C : control
+M: alt in Linux, option in Mac (if option does not work, use Esc instead)
+# If the minibuffer command color is blue and hard to read, create a file with name .emacs in ~/, add the following line:
+(set-face-foreground 'minibuffer-prompt "white")
+
