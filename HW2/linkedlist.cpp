@@ -87,14 +87,18 @@ nodedata LinkedList::getnodebykey(unsigned int akey)
     throw std::runtime_error(errormsg);
     }
   Node* node = head;
-  Node** previous = &head; // bug
+  //Node** previous = &head; // bug
+  Node*& previous = head; // bug
   while (node->key != akey)
     {
-    previous = &(node->link);
+    //previous = &(node->link);
+    previous = node->link;
     node = node->link;
     }
-  *previous = node->link;
+  //*previous = node->link;
+  previous = node->link;
   nodedata cargo = node->cargo;
+//  count--; // bug
   delete node;
   return cargo;
 }
@@ -118,6 +122,7 @@ int main(int argc, char* argv[])
     keys[k] = ll.insert(2*k+1);
 
   nodedata thisnode = ll.getnodebykey(3);
+//  thisnode = ll.getnodebykey(2);
   
   unsigned int finished = 0;
 
